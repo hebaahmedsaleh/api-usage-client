@@ -7,9 +7,7 @@ const ScatterChartWithDateSelector = () => {
   const [scatterData, setScatterData] = useState<any[]>([]);
   const [selectedDate, setSelectedDate] = useState(dateRange.start);
 
-  const API_URL = import.meta.env.PROD 
-  ? '/api'  // Production: uses Netlify redirects
-  : 'https://rad-blini-e1ec7c.netlify.app/api';
+  const API_URL =  'https://rad-blini-e1ec7c.netlify.app/api';
 
   // Generate available dates from selected range
   useEffect(() => {

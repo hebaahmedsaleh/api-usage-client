@@ -20,9 +20,7 @@ const SummaryCards: React.FC<SummaryCardsProps> = ({ dateRange }) => {
 
   const hasDateRange = !!(dateRange.start && dateRange.end);
 
-  const API_URL = import.meta.env.PROD 
-  ? '/api'  // Production: uses Netlify redirects
-  : 'https://rad-blini-e1ec7c.netlify.app/api';// Development: points to deployed backend
+  const API_URL = 'https://rad-blini-e1ec7c.netlify.app/api';// Development: points to deployed backend
 
 useEffect(() => {
   const fetchSummary = async () => {
